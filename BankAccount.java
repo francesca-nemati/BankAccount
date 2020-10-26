@@ -40,4 +40,11 @@ public class BankAccount {
     else return false;
   }
 
+  public String toString() {
+    String id_balance = "";
+    id_balance = id_balance + accountID;
+    id_balance = id_balance + "\t";
+    id_balance = id_balance + balance;
+  }
+
 }
