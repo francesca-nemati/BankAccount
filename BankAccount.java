@@ -45,6 +45,7 @@ public class BankAccount {
     id_balance = id_balance + accountID;
     id_balance = id_balance + "\t";
     id_balance = id_balance + balance;
+    return id_balance;
   }
 
 }
