@@ -1,16 +1,28 @@
 public class BankAccountTester {
   public static void main(String[] args) {
-    BankAccount user1 = new BankAccount(0001, "password!");
-    BankAccount user2 = new BankAccount(0002, "APCSisCool");
-    BankAccount user3 = new BankAccount(0003, "Monday");
+    BankAccount user1 = new BankAccount(1000, "password!");
+    BankAccount user2 = new BankAccount(2000, "APCSisCool");
+    BankAccount user3 = new BankAccount(3000, "Monday");
 
-    System.out.println("User 1 ID" + user1.getAccountID());
-    System.out.println("User 1 initial balance" + user1.getBalance());
+    System.out.println("User 1 ID: " + user1.getAccountID());
+    System.out.println("User 1 initial balance: " + user1.getBalance());
+    System.out.println();
 
-    System.out.println("User 2 ID" + user2.getAccountID());
-    System.out.println("User 2 initial balance" + user2.getBalance());
+    System.out.println("User 2 ID: " + user2.getAccountID());
+    System.out.println("User 2 initial balance: " + user2.getBalance());
+    System.out.println();
 
-    System.out.println("User 3 ID" + user2.getAccountID()); 
-    System.out.println("User 3 initial balance" + user2.getBalance());
+    System.out.println("User 3 ID: " + user3.getAccountID());
+    System.out.println("User 3 initial balance: " + user3.getBalance());
+    System.out.println();
+
+    user1.deposit(100.00);
+    user2.deposit(200.00);
+    user3.deposit(300.00);
+
+    System.out.println("User 1 new balance: " + user1.getBalance());
+    System.out.println("User 2 new balance: " + user2.getBalance());
+    System.out.println("User 3 new balance: " + user3.getBalance());
+
   }
 }

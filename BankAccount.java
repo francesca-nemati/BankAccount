@@ -27,7 +27,7 @@ public class BankAccount {
   public boolean deposit(double amount) {
     if (amount >= 0) {
       balance = balance + amount;
-      return true
+      return true;
     }
     else return false;
   }
