@@ -16,9 +16,22 @@ public class BankAccountTester {
     System.out.println("User 3 initial balance: " + user3.getBalance());
     System.out.println();
 
-    user1.deposit(100.00);
-    user2.deposit(200.00);
-    user3.deposit(300.00);
+    if (user1.deposit(100.00)) {
+      System.out.println("Deposit success!");
+    }
+    else System.out.println("Deposit failure");
+
+    if (user2.deposit(200.00)) {
+      System.out.println("Deposit success!");
+    }
+    else System.out.println("Deposit failure");
+
+    if (user3.deposit(300.00)) {
+      System.out.println("Deposit success!");
+    }
+    else System.out.println("Deposit failure");
+
+    System.out.println();
 
     System.out.println("User 1 new balance: " + user1.getBalance());
     System.out.println("User 2 new balance: " + user2.getBalance());
