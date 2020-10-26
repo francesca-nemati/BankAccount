@@ -26,7 +26,7 @@ public class BankAccountTester {
     }
     else System.out.println("Deposit failure");
 
-    if (user3.deposit(300.00)) {
+    if (user3.deposit(-300.00)) {
       System.out.println("Deposit success!");
     }
     else System.out.println("Deposit failure");
@@ -36,6 +36,29 @@ public class BankAccountTester {
     System.out.println("User 1 new balance: " + user1.getBalance());
     System.out.println("User 2 new balance: " + user2.getBalance());
     System.out.println("User 3 new balance: " + user3.getBalance());
+    System.out.println();
+
+    if (user1.withdraw(50.00)) {
+      System.out.println("Withdrawl success!");
+    }
+    else System.out.println("Withdrawl failure");
+
+    if (user2.withdraw(200.00)) {
+      System.out.println("Withdrawl success!");
+    }
+    else System.out.println("Withdrawl failure");
+
+    if (user3.withdraw(5.00)) {
+      System.out.println("Withdrawl success!");
+    }
+    else System.out.println("Withdrawl failure");
+
+    System.out.println();
+
+    System.out.println("User 1 new balance: " + user1.getBalance());
+    System.out.println("User 2 new balance: " + user2.getBalance());
+    System.out.println("User 3 new balance: " + user3.getBalance());
+
 
   }
 }
