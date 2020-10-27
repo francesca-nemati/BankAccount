@@ -63,8 +63,6 @@ public class BankAccountTester {
     System.out.println("User 1 ID/Balance: " + user1.toString());
     System.out.println("User 2 ID/Balance: " + user2.toString());
     System.out.println("User 3 ID/Balance: " + user3.toString());
-    System.out.println();
-
-
   }
+
 }
