@@ -41,11 +41,27 @@ public class BankAccount {
   }
 
   public String toString() {
-    String id_balance = "";
+    String id_balance = "#";
     id_balance = id_balance + accountID;
-    id_balance = id_balance + "\t";
+    id_balance = id_balance + "\t$";
     id_balance = id_balance + balance;
     return id_balance;
+  }
+
+  private boolean authenticate(String password) {
+    return password.equals(this.password);
+  }
+
+  public boolean transferTo(BankAccount other, double amount, String password) {
+    if(authenticate(password) && withdraw(amount)) {
+      if (other.deposit(amount)) {
+        return true;
+      }
+      else {
+        System.out.println("ERROR: Amount withdrawn could not be added to account");
+      }
+    }
+    return false;
   }
 
 }
